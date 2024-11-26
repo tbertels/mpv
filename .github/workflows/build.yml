@@ -6,6 +6,7 @@ on:
       - master
       - ci
       - 'release/**'
+      - libmpv
     paths-ignore:
       - 'DOCS/**'
       - 'TOOLS/lua/**'
@@ -546,7 +547,7 @@ jobs:
       - name: Build with meson
         id: build
         run: |
-          ./ci/build-msys2.sh meson
+          ./ci/build-msys2.sh meson -Dlibmpv=true
         env:
           SYS: ${{ matrix.sys }}
 
