@@ -321,7 +321,7 @@ if [ "$2" = pack ]; then
     dlls=(
         libgcc_*.dll lib{ssp,stdc++,winpthread}-[0-9]*.dll # compiler runtime
         av*.dll sw*.dll postproc-[0-9]*.dll lib{ass,freetype,fribidi,harfbuzz,iconv,placebo}-[0-9]*.dll
-        lib{shaderc_shared,spirv-cross-c-shared,dav1d}.dll zlib1.dll
+        lib{shaderc_shared,spirv-cross-c-shared,dav1d}.dll zlib1.dll libmpv-*.dll
     )
     if [[ -f vulkan-1.dll ]]; then
         dlls+=(vulkan-1.dll)
